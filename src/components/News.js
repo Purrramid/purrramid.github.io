@@ -12,7 +12,7 @@ class Item extends React.Component {
 		this.content = props.content;
 		this.discordChannel = props.discordChannel ? `#${props.discordChannel}` : null;
 		this.hasImage = 'image' in props;
-		this.image = ["https://cdn.discordapp.com/attachments/685581865016492112/882090843824082994/unknown.png", "https://cdn.discordapp.com/attachments/685581865016492112/882090843824082994/unknown.png"] ?? props.image;
+		this.image = props.image;
 	}
 
 	clickedImage(e) {
