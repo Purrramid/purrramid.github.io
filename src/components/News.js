@@ -11,6 +11,12 @@ class Item extends React.Component {
 		this.author = props.author ? `@${props.author}` : "Administrator";
 		this.content = props.content;
 		this.discordChannel = props.discordChannel ? `#${props.discordChannel}` : null;
+		this.hasImage = 'image' in props;
+		this.image = ["https://cdn.discordapp.com/attachments/685581865016492112/882090843824082994/unknown.png", "https://cdn.discordapp.com/attachments/685581865016492112/882090843824082994/unknown.png"] ?? props.image;
+	}
+
+	clickedImage(e) {
+		window.open(e.target.src);
 	}
 
 	render() {
@@ -21,8 +27,12 @@ class Item extends React.Component {
 						<span className="flex-grow-1 fw-bold">{this.title}</span>
 						<Moment format="D MMMM[,] hh:mma">{this.date}</Moment>
 					</div>
-					<div className="card-body markdown">
-						<Markdown>{this.content}</Markdown>
+					<div className="card-body">
+						<Markdown className="markdown">{this.content}</Markdown>
+						{this.hasImage
+							? <img src={this.image instanceof Array ? this.image[0] : this.image} className="mb-3" onClick={this.clickedImage} alt="Attachment" />
+							: null
+						}
 						<div><span className="user">{this.author}</span>{this.discordChannel != null && <> in <span className="user">{this.discordChannel}</span></>}</div>
 						<div><Moment className="fst-italic" fromNow>{this.date}</Moment></div>
 					</div>
@@ -65,7 +75,7 @@ class News extends React.Component {
 					<div className="d-grid grid-3">
 						{/* Only show 3 at a time. */}
 						{this.state.items.slice(0, 3).map((x, i) => <Item key={i} {...x} />)}
-						{this.state.items.length === 0 && <div className="spinner-border"/>}
+						{this.state.items.length === 0 && <div className="spinner-border" />}
 					</div>
 				</div>
 				<a href="/news" className="more d-block mt-3">Show all</a>
