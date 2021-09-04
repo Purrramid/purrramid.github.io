@@ -10,11 +10,11 @@ class App extends React.Component {
   render() {
     return (
       <main>
-        <Description />
-        <div className="container text-white my-5">
+        <Description customLogo={this.props.customLogo} />
+        <div className="container text-white py-5">
           <News />
           <Community />
-          <Games />
+          <Games firebase={this.props.firebase} />
           <Streamers firebase={this.props.firebase} />
         </div>
       </main>

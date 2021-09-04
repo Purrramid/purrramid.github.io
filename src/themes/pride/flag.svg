@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 6">
+	<rect x="0" y="0" width="100%" height="1" fill="#FF0018" />
+	<rect x="0" y="1" width="100%" height="1" fill="#FFA52C" />
+	<rect x="0" y="2" width="100%" height="1" fill="#FFFF41" />
+	<rect x="0" y="3" width="100%" height="1" fill="#008018" />
+	<rect x="0" y="4" width="100%" height="1" fill="#0000F9" />
+	<rect x="0" y="5" width="100%" height="1" fill="#86007D" />
+	<!-- source: https://www.schemecolor.com/lgbt-flag-colors.php -->
+
+	<path d="M  2,0 l 1,0 2,3 -2,3 -1,0 Z" fill="#000" />
+	<path d="M  1,0 l 1,0 2,3 -2,3 -1,0 Z" fill="#613915" />
+	<path d="M  0,0 l 1,0 2,3 -2,3 -1,0 Z" fill="#55CDFC" />
+	<path d="M -1,0 l 1,0 2,3 -2,3 -1,0 Z" fill="#F7A8B8" />
+	<path d="M -2,0 l 1,0 2,3 -2,3 -1,0 Z" fill="#fff" />
+</svg>

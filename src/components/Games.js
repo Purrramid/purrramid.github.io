@@ -22,21 +22,37 @@ class Game extends React.Component {
 }
 
 class Games extends React.Component {
+	state = {
+		games: []
+	}
+
+	componentDidMount() {
+		this.props.firebase.then(({ games }) => {
+			this.setState({
+				games: Object.values(games)
+			})
+		})
+	}
+
 	render() {
 		return (
 			<div className="my-3">
 				<h2 id="games">Games</h2>
 				<p>We play a lot of games, and when we say that, we mean it. Here's just a small list of the games we play.</p>
-				<games className="d-grid grid-5">
-					<Game name="Tom Clancy's Rainbow Six Siege" href="https://rainbow6.com" />
-					<Game name="VALORANT" href="https://playvalorant.com" />
-					<Game name="Dead by Daylight" href="https://deadbydaylight.com" />
-					<Game name="Battlefield 4" href="https://www.ea.com/games/battlefield/battlefield-4" />
-					<Game name="Apex Legends" href="https://apexlegends.com" />
+				<games className={`d-grid grid-${this.state.games.length}`}>
+					{ this.state.games.map((x) =>
+						<Game key={Buffer.from(`game-${x.name}`).toString("base64")} name={x.name} href={x.url} />
+					)}
 				</games>
 			</div>
 		);
 	}
 }
+// <Game name="Tom Clancy's Rainbow Six Siege" href="https://rainbow6.com" />
+// <Game name="VALORANT" href="https://playvalorant.com" />
+// {/* <Game name="Dead by Daylight" href="https://deadbydaylight.com" /> */}
+// {/* <Game name="Battlefield 4" href="https://www.ea.com/games/battlefield/battlefield-4" /> */}
+// <Game name="Apex Legends" href="https://apexlegends.com" />
+// <Game name="Splitgate" href="https://apexlegends.com" />
 
 export default Games;

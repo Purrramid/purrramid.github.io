@@ -1,0 +1,30 @@
+body {
+	background: none;
+	background: url("./flag.svg");
+	background-repeat-y: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+@media only screen and (orientation: portrait) {
+	body {
+		background-position: right;
+	}
+}
+
+main, nav.top {
+	background-color: rgba(0 0 0 / 35%);
+}
+
+#description {
+	background: none!important;
+}
+
+#icon {
+	padding: 2rem;
+}
+
+.container.my-5 {
+	margin: 0 inherit!important;
+	padding: 0 0 3rem!important;
+}

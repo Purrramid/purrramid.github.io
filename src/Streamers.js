@@ -85,9 +85,9 @@ class Streamers extends React.Component {
 
 	render() {
 		return (
-			<main id="description">
-				<div className="container mt-5 px-3 text-white">
-					<div className="my-3" data-section="streamers">
+			<main>
+				<div className="container pt-5 px-3 text-white">
+					<div className="py-3" data-section="streamers">
 						<h2>Streamers</h2>
 						<p>This is a list of all the amazing streamers in the community!</p>
 						<div id="spinner" className="spinner-border" hidden={!this.state.loading}></div>

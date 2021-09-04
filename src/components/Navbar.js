@@ -57,6 +57,7 @@ class Navbar extends React.Component {
 								Jump
 							</a>
 							<ul className="dropdown-menu dropdown-menu-end" aria-labelledby="navbarScrollingDropdown">
+								<Jump className="dropdown-item" to="news" offset={this.offset}>News</Jump>
 								<Jump className="dropdown-item" to="community" offset={this.offset}>Community</Jump>
 								<Jump className="dropdown-item" to="games" offset={this.offset}>Games</Jump>
 								<Jump className="dropdown-item" to="streamers" offset={this.offset}>Streamers</Jump>

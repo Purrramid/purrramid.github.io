@@ -4,6 +4,10 @@ import { PNG as catsPNG, WebP as catsWebP } from "./img/cats";
 class Description extends React.Component {
 	offset = -60;
 
+	state = {
+		logo: this.props.customLogo ?? null
+	}
+
 	render() {
 		return (
 			<div id="description" className="bg-black-30 w-100 text-white">
@@ -17,13 +21,20 @@ class Description extends React.Component {
 					<div className="row">
 						<div className="col-sm-4">
 							<picture>
-								<source srcSet={catsWebP[0]} media="(min-width: 576px) and (max-width: 992px)" type="image/webp" />
-								<source srcSet={catsWebP[1]} type="image/webp" />
+								{
+									this.state.logo === null
+										?
+										<>
+											<source srcSet={catsWebP[0]} media="(min-width: 576px) and (max-width: 992px)" type="image/webp" />
+											<source srcSet={catsWebP[1]} type="image/webp" />
 
-								<source srcSet={catsPNG[0]} media="(min-width: 576px) and (max-width: 992px)" type="image/png" />
-								<source srcSet={catsPNG[1]} type="image/png" />
+											<source srcSet={catsPNG[0]} media="(min-width: 576px) and (max-width: 992px)" type="image/png" />
+											<source srcSet={catsPNG[1]} type="image/png" />
 
-								<img src={catsPNG[1]} alt="Purrramid Icon" id="icon" className="w-100 w-sm-auto" />
+										</>
+										: null
+								}
+								<img src={this.state.logo ?? catsPNG[1]} alt="Purrramid Icon" id="icon" className="w-100 w-sm-auto" />
 							</picture>
 						</div>
 						<div className="p-5 col-sm-8">
