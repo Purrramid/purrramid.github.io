@@ -1,28 +1,9 @@
-body {
-	/* --top: #f40;
-	/* --top: #f62; */
-	/* --bottom: #a20; */
-	/* --bottom: #281; */
-
-
-	/* --top: #f62;
-	--bottom: #281; */
-	/* --degree: 0deg; */
-
-
-	/* final */
---bottom: #521404;
---top: #f62;
---degree: 0deg;
+body, #bg-wrapper {
+	--bottom: #521404;
+	--top: #f62;
+	--degree: 0deg;
 }
-.navbar {
+
+nav {
 	background-color: #973510;
 }
-
-
-
-/* body {
-	--top: #ff8100;
-	--bottom: #732c1b;
-} */
-

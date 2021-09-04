@@ -1,13 +1,13 @@
-body {
+body, #bg-wrapper {
 	background: none;
+	background: linear-gradient(to bottom, red, yellow, orange, green, blue, purple);
 	background: url("./flag.svg");
-	background-repeat-y: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
+	background-repeat: no-repeat;
+	background-size: auto 100vh;
 }
 
 @media only screen and (orientation: portrait) {
-	body {
+	body, #bg-wrapper {
 		background-position: right;
 	}
 }

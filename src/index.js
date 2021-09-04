@@ -32,7 +32,7 @@ const Themes = {
 }
 
 let customLogo;
-window.onload = async () => {
+window.addEventListener("load", async () => {
   if (localStorage.getItem("theme") in Themes) {
     let name = localStorage.getItem("theme");
     let theme = Themes[name];
@@ -83,4 +83,4 @@ window.onload = async () => {
     </React.StrictMode>,
     document.getElementById('root')
   );
-}
+});
