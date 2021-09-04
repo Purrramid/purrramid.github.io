@@ -1,0 +1,2 @@
+(this["webpackJsonppurrramid-website"]=this["webpackJsonppurrramid-website"]||[]).push([[6],{88:function(e,i,s){"use strict";s.r(i),i.default=s.p+"static/media/logo.fe1e881e.png"}}]);
+//# sourceMappingURL=6.df075a1c.chunk.js.map
