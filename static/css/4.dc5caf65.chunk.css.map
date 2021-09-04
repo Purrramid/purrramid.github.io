@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/themes/halloween/style.css"],"names":[],"mappings":"AAAA,iBACC,gBAAiB,CACjB,UAAW,CACX,aACD,CAEA,IACC,wBACD","file":"4.dc5caf65.chunk.css","sourcesContent":["body, #bg-wrapper {\r\n\t--bottom: #521404;\r\n\t--top: #f62;\r\n\t--degree: 0deg;\r\n}\r\n\r\nnav {\r\n\tbackground-color: #973510;\r\n}\r\n"]}
